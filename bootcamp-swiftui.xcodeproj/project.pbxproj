@@ -47,6 +47,7 @@
 		53CF530729191995002ED4C5 /* bootcamp_swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootcamp_swiftuiUITests.swift; sourceTree = "<group>"; };
 		53CF530929191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootcamp_swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53CF531929191A39002ED4C5 /* EcommerceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceFlow.swift; sourceTree = "<group>"; };
+		53CF531D291923AD002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +138,7 @@
 			children = (
 				53CF531B29191B36002ED4C5 /* Internal */,
 				53CF531929191A39002ED4C5 /* EcommerceFlow.swift */,
+				53CF531D291923AD002ED4C5 /* README.md */,
 			);
 			path = "0001-ecommerce-flow";
 			sourceTree = "<group>";
