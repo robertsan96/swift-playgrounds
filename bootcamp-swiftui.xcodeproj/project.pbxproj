@@ -97,12 +97,12 @@
 		53CF52EA29191994002ED4C5 /* bootcamp-swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				53CF5316291919E0002ED4C5 /* 0001-ecommerce-flow */,
+				53CF52F229191994002ED4C5 /* Preview Content */,
 				53CF52EB29191994002ED4C5 /* bootcamp_swiftuiApp.swift */,
 				53CF52ED29191994002ED4C5 /* ContentView.swift */,
 				53CF52EF29191994002ED4C5 /* Assets.xcassets */,
 				53CF52F129191994002ED4C5 /* bootcamp_swiftui.entitlements */,
-				53CF52F229191994002ED4C5 /* Preview Content */,
+				53CF5316291919E0002ED4C5 /* 0001-ecommerce-flow */,
 			);
 			path = "bootcamp-swiftui";
 			sourceTree = "<group>";
@@ -135,9 +135,25 @@
 		53CF5316291919E0002ED4C5 /* 0001-ecommerce-flow */ = {
 			isa = PBXGroup;
 			children = (
+				53CF531B29191B36002ED4C5 /* Internal */,
 				53CF531929191A39002ED4C5 /* EcommerceFlow.swift */,
 			);
 			path = "0001-ecommerce-flow";
+			sourceTree = "<group>";
+		};
+		53CF531B29191B36002ED4C5 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				53CF531C29191B3F002ED4C5 /* State */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		53CF531C29191B3F002ED4C5 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
