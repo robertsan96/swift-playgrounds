@@ -1,6 +1,10 @@
 #  0001 - Ecommerce Flow
 
-## Requirements
+## Description
+
+Build an online shopping platform flow for iOS and macOS using SwiftUI.
+
+## Tasks
 
  - [ ] Login into a User Account or create a new account
      - [ ] User Registration (social auth)
