@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": "19ae304c-63f2-4d6d-89bc-5ad885cf0cfc",
+      "variationId": "b0f17f46-dd9b-4582-8638-592ab04d8fec"
+    }
+  ],
+  "productCategory": [
+    {
+      "productId": "19ae304c-63f2-4d6d-89bc-5ad885cf0cfc",
+      "categoryId": "30e7200b-d0b6-4981-bd3d-bbcbe34fc9f2"
+    }
+  ],
+  "variations": [
+    {
+      "id": "b0f17f46-dd9b-4582-8638-592ab04d8fec",
+      "productId": "19ae304c-63f2-4d6d-89bc-5ad885cf0cfc",
+      "name": "Pear Book Pro 18 (2021) with Pear P1 Pro, 10 CPU cores, 16 GPU cores, 16GB, 1TB SSD, Pear Grey, Int KB",
+      "featuredPhoto": "http://localhost:3000/images/laptop_1.png",
+      "photos": ["http://localhost:3000/images/laptop_1.png"]
+    },
+    {
+      "id": "114623f1-3fb6-46e9-a105-2f1a0cf19040",
+      "productId": "19ae304c-63f2-4d6d-89bc-5ad885cf0cfc",
+      "name": "Pear Book Pro 18 (2021) with Pear P1 Pro, 10 CPU cores, 16 GPU cores, 8GB, 1TB SSD, Pear Silver, Int KB",
+      "featuredPhoto": "http://localhost:3000/images/laptop_2.png",
+      "photos": ["http://localhost:3000/images/laptop_2.png"]
+    }
+  ],
+  "specifications": [
+    {
+      "id": "a2b768c7-95c7-46ad-9e25-729b43eab805",
+      "variationId": "b0f17f46-dd9b-4582-8638-592ab04d8fec",
+      "specKey": "SPEC_COLOR",
+      "value": "Pear Grey"
+    },
+    {
+      "id": "49461370-1072-4cfa-aeba-159916dde42f",
+      "variationId": "b0f17f46-dd9b-4582-8638-592ab04d8fec",
+      "specKey": "SPEC_RAM",
+      "value": "16GB"
+    },
+    {
+      "id": "a2b768c7-95c7-46ad-9e25-729b43eab805",
+      "variationId": "114623f1-3fb6-46e9-a105-2f1a0cf19040",
+      "specKey": "SPEC_COLOR",
+      "value": "Pear Silver"
+    },
+    {
+      "id": "49461370-1072-4cfa-aeba-159916dde42f",
+      "variationId": "114623f1-3fb6-46e9-a105-2f1a0cf19040",
+      "specKey": "SPEC_RAM",
+      "value": "8GB"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "cfe3bf9a-8763-4439-960b-be39e5f5db30",
+      "productId": "19ae304c-63f2-4d6d-89bc-5ad885cf0cfc",
+      "userId": "7415e6d0-7b6c-43f5-9dc5-da43dcf5d159",
+      "stars": 5,
+      "title": "Fantastic MacBook!",
+      "description": "This Apple Silicon is great! Sometimes I feel like there's no fan at all in this device - incredible silent!"
+    }
+  ],
+  "categories": [
+    {
+      "id": "97369547-6d6a-4434-84f3-c4542bb6581d",
+      "name": "Electronics",
+      "categoryId": ""
+    },
+    {
+      "id": "30e7200b-d0b6-4981-bd3d-bbcbe34fc9f2",
+      "name": "Laptops",
+      "categoryId": "97369547-6d6a-4434-84f3-c4542bb6581d"
+    }
+  ],
+  "users": [
+    {
+      "id": "7415e6d0-7b6c-43f5-9dc5-da43dcf5d159",
+      "firstName": "Robert",
+      "lastName": "Sandru",
+      "email": "xxx@xxx.com"
+    }
+  ]
+}

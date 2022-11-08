@@ -3,13 +3,12 @@
 ## Install
 
 ```bash
-npm install
-npm start
+npm install -g json-server
+json-server --watch ./db.json
 ```
 
 ## Routes
 
 ```
 https://localhost:3000/products
-https://localhost:3000/users
 ```
