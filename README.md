@@ -16,7 +16,7 @@ Flows are pieces of an app - they help me learn only a specific part of a projec
 
 ### **[BootcampTabViewOne](apple/swiftui/bootcamp-swiftui/Components/0001-BootcampTabView)**
 
-| Photo          | Description                                                                       |
-| -------------- | --------------------------------------------------------------------------------- |
-| Portrait mode  | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOne.gif)          |
-| Landscape mode | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOneLandscape.gif) |
+| Orientation | Pic                                                                               |
+| ----------- | --------------------------------------------------------------------------------- |
+| Portrait    | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOne.gif)          |
+| Landscape   | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOneLandscape.gif) |
