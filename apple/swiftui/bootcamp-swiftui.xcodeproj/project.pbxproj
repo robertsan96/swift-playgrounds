@@ -15,6 +15,8 @@
 		53CF530829191995002ED4C5 /* bootcamp_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF530729191995002ED4C5 /* bootcamp_swiftuiUITests.swift */; };
 		53CF530A29191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF530929191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift */; };
 		53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF531929191A39002ED4C5 /* EcommerceFlow.swift */; };
+		53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */; };
+		53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		53CF531D291923AD002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF531F291A5F43002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF5321291A602E002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPropertyWrappers.swift; sourceTree = "<group>"; };
+		53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObservedObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		53CF52EA29191994002ED4C5 /* bootcamp-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				53CF5322291A792D002ED4C5 /* Exercises */,
 				53CF5320291A6025002ED4C5 /* Components */,
 				53CF531E291A5F34002ED4C5 /* Flows */,
 				53CF52F229191994002ED4C5 /* Preview Content */,
@@ -160,6 +165,39 @@
 				53CF5321291A602E002ED4C5 /* README.md */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		53CF5322291A792D002ED4C5 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5325291A795E002ED4C5 /* 0001-property-wrapper */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		53CF5325291A795E002ED4C5 /* 0001-property-wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5327291A798A002ED4C5 /* SwiftObservedObject */,
+				53CF5326291A7983002ED4C5 /* StateObject */,
+				53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */,
+			);
+			path = "0001-property-wrapper";
+			sourceTree = "<group>";
+		};
+		53CF5326291A7983002ED4C5 /* StateObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateObject;
+			sourceTree = "<group>";
+		};
+		53CF5327291A798A002ED4C5 /* SwiftObservedObject */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */,
+			);
+			path = SwiftObservedObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */,
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
+				53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */,
 				53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

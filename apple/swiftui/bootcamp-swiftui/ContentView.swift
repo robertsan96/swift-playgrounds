@@ -9,7 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        EcommerceFlow()
+        NavigationView {
+            List {
+                Section("Flows") {
+                    NavigationLink("0001 - Ecommerce Flow", destination: {
+                        EcommerceFlow().navigationTitle("Ecommerce Flow")
+                    })
+                }
+                Section("Exercises") {
+                    NavigationLink("0001 - Property Wrappers", destination: {
+                        SwiftPropertyWrappers()
+                    })
+                }
+            }
+            .navigationTitle("SwiftUI Bootcamp")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
