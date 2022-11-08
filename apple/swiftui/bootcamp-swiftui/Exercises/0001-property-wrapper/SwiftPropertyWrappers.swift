@@ -12,6 +12,7 @@ struct SwiftPropertyWrappers: View {
         List {
             NavigationLink("Swift @ObservedObject", destination: { SwiftObservedObject() })
             NavigationLink("Swift @StateObject", destination: { SwiftStateObject() })
+            NavigationLink("MVVM Examples", destination: { SwiftMVVM() })
         }
     }
 }

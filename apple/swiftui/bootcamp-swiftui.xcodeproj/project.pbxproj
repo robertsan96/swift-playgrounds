@@ -18,6 +18,8 @@
 		53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */; };
 		53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */; };
 		53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */; };
+		53CF532F291A8409002ED4C5 /* SwiftMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */; };
+		53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5331291A848E002ED4C5 /* PassingViewModelToChildren.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPropertyWrappers.swift; sourceTree = "<group>"; };
 		53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObservedObject.swift; sourceTree = "<group>"; };
 		53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStateObject.swift; sourceTree = "<group>"; };
+		53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMVVM.swift; sourceTree = "<group>"; };
+		53CF5331291A848E002ED4C5 /* PassingViewModelToChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingViewModelToChildren.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,27 +184,45 @@
 		53CF5325291A795E002ED4C5 /* 0001-property-wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				53CF5327291A798A002ED4C5 /* SwiftObservedObject */,
-				53CF5326291A7983002ED4C5 /* SwiftStateObject */,
+				53CF532D291A83E5002ED4C5 /* 0001-1-SwiftObservedObject */,
+				53CF5326291A7983002ED4C5 /* 0001-2-SwiftStateObject */,
+				53CF532C291A83C4002ED4C5 /* 0001-3-SwiftMVVM */,
 				53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */,
 			);
 			path = "0001-property-wrapper";
 			sourceTree = "<group>";
 		};
-		53CF5326291A7983002ED4C5 /* SwiftStateObject */ = {
+		53CF5326291A7983002ED4C5 /* 0001-2-SwiftStateObject */ = {
 			isa = PBXGroup;
 			children = (
 				53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */,
 			);
-			path = SwiftStateObject;
+			path = "0001-2-SwiftStateObject";
 			sourceTree = "<group>";
 		};
-		53CF5327291A798A002ED4C5 /* SwiftObservedObject */ = {
+		53CF532C291A83C4002ED4C5 /* 0001-3-SwiftMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5330291A8478002ED4C5 /* 0001-3-1-PassingViewModelToChildren */,
+				53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */,
+			);
+			path = "0001-3-SwiftMVVM";
+			sourceTree = "<group>";
+		};
+		53CF532D291A83E5002ED4C5 /* 0001-1-SwiftObservedObject */ = {
 			isa = PBXGroup;
 			children = (
 				53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */,
 			);
-			path = SwiftObservedObject;
+			path = "0001-1-SwiftObservedObject";
+			sourceTree = "<group>";
+		};
+		53CF5330291A8478002ED4C5 /* 0001-3-1-PassingViewModelToChildren */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5331291A848E002ED4C5 /* PassingViewModelToChildren.swift */,
+			);
+			path = "0001-3-1-PassingViewModelToChildren";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */,
 				53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */,
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
+				53CF532F291A8409002ED4C5 /* SwiftMVVM.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
 				53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */,
 				53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */,
