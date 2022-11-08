@@ -113,6 +113,7 @@ fileprivate struct ImpalerCardView: View {
 fileprivate class ImpalerCardViewModel: ObservableObject {
     @Published var impaler: Impaler
     
+    // Going to be called each time the parent view asks for redraw (press the refresh button)
     init(impaler: Impaler) {
         self.impaler = impaler
     }
