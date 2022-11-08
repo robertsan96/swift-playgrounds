@@ -62,7 +62,7 @@ fileprivate class ImpalerViewModel: ObservableObject {
     @Published var impaler = "Vlad Tepes the \(Int.random(in: 4...100))th"
     @Published var impaled = 0
     
-    // 9. Deinit is getting called on every redraw
+    // 9. Deinit is not getting called on every redraw
     deinit {
         print("Deinit called.")
     }
