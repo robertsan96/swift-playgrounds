@@ -11,8 +11,9 @@ Build an online shopping platform flow for iOS and macOS using SwiftUI.
      - [ ] User Account View
          - [ ] My orders
              - [ ] Show an order history (searchable, filterable, sortable based on date)
+         - [ ] Notification settings: marketing & delivery
      - [ ] Logout
- - [ ] Display a list of products from memory (with infinity scroll). Each product card must have:
+ - [ ] Display a list of products from memory or mock api (with infinity scroll). Each product card must have:
      - [ ] Product image
      - [ ] Product price & discounts
      - [ ] Toggle favorites button
