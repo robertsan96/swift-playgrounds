@@ -19,5 +19,6 @@ struct EcommerceFlow: View {
 struct EcommerceFlow_Previews: PreviewProvider {
     static var previews: some View {
         EcommerceFlow()
+            .preferredColorScheme(.dark)
     }
 }
