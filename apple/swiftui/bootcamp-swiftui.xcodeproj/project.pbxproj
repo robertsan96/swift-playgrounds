@@ -17,6 +17,7 @@
 		53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF531929191A39002ED4C5 /* EcommerceFlow.swift */; };
 		53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */; };
 		53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */; };
+		53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		53CF5321291A602E002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPropertyWrappers.swift; sourceTree = "<group>"; };
 		53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObservedObject.swift; sourceTree = "<group>"; };
+		53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStateObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,17 +181,18 @@
 			isa = PBXGroup;
 			children = (
 				53CF5327291A798A002ED4C5 /* SwiftObservedObject */,
-				53CF5326291A7983002ED4C5 /* StateObject */,
+				53CF5326291A7983002ED4C5 /* SwiftStateObject */,
 				53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */,
 			);
 			path = "0001-property-wrapper";
 			sourceTree = "<group>";
 		};
-		53CF5326291A7983002ED4C5 /* StateObject */ = {
+		53CF5326291A7983002ED4C5 /* SwiftStateObject */ = {
 			isa = PBXGroup;
 			children = (
+				53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */,
 			);
-			path = StateObject;
+			path = SwiftStateObject;
 			sourceTree = "<group>";
 		};
 		53CF5327291A798A002ED4C5 /* SwiftObservedObject */ = {
@@ -334,6 +337,7 @@
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
 				53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */,
+				53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */,
 				53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

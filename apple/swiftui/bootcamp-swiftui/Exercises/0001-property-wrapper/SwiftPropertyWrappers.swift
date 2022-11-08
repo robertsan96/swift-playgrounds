@@ -10,7 +10,8 @@ import SwiftUI
 struct SwiftPropertyWrappers: View {
     var body: some View {
         List {
-            NavigationLink("Swift Observed Object", destination: { SwiftObservedObject() })
+            NavigationLink("Swift @ObservedObject", destination: { SwiftObservedObject() })
+            NavigationLink("Swift @StateObject", destination: { SwiftStateObject() })
         }
     }
 }
