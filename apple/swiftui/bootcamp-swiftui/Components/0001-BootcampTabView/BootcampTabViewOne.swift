@@ -27,7 +27,12 @@ struct BootcampTabViewOne: View {
         .init(id: UUID(),
               title: "Home",
               systemImage: "house",
-              activeSystemImage: "house.fill"),
+              activeSystemImage: "house.fill",
+              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              activeIconColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1),
+              activeTextColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1)),
         .init(id: UUID(),
               title: "Favorites",
               systemImage: "heart",
@@ -155,7 +160,7 @@ struct BootcampTabViewOneWrapper: View {
         ZStack {
             Rectangle()
                 .ignoresSafeArea(.all)
-                .foregroundColor(Color.cyan.opacity(0.7))
+                .foregroundColor(Color.cyan.opacity(0.15))
             
             VStack {
                 BootcampTabViewOne(activeTab: $activeTab)

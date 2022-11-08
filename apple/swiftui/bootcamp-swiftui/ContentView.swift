@@ -27,7 +27,7 @@ struct ContentView: View {
                     NavigationLink("0001 - BootcampTabViewOne", destination: {
                         ZStack {
                             Rectangle()
-                                .foregroundColor(.cyan)
+                                .foregroundColor(.cyan.opacity(0.15))
                                 .ignoresSafeArea()
                             VStack {
                                 Spacer()
