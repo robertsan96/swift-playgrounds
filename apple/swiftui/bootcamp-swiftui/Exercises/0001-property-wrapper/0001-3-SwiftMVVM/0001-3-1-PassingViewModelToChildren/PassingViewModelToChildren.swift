@@ -117,6 +117,10 @@ fileprivate class ImpalerCardViewModel: ObservableObject {
         self.impaler = impaler
     }
     
+    // On ImpalerView state change, the whole list is going to be redrawn
+    // This means, list items are going to receive a new view model because
+    // of the @ObservedObject property wrapper. The old view models are going to be
+    // deallocated.
     deinit {
         print("Deinit \(impaler.name)")
     }
@@ -145,7 +149,7 @@ fileprivate struct ImpalerEditView: View {
                         Button("Increase Impaled") { impaler.impaled += 1 }
                     }
                 }
-                .padding(.vertical)
+                .padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
             }
