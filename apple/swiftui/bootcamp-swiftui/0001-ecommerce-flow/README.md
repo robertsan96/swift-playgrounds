@@ -4,6 +4,10 @@
 
 Build an online shopping platform flow for iOS and macOS using SwiftUI.
 
+## How to run
+
+**Make sure to start the local json-server found in the resources directory**
+
 ## Tasks
 
  - [ ] Login into a User Account or create a new account
