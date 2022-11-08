@@ -10,36 +10,34 @@ import SwiftUI
 struct BootcampTabViewOne: View {
     
     var cornerRadius: CGFloat = 10
-    var height: CGFloat = 60
     
-    var tabBackgroundColor: Color = .white
-    
-    var activeIndicatorHeight: CGFloat = 30
-    var activeIndicatorWidth: CGFloat = 40
-    var activeColor: Color = .yellow
-    var activeTabBackgroundColor: Color = .white
+    var defaultTabBackgroundColor: Color = .white
+    var defaultActiveTabBackgroundColor: Color = .white
     
     @Binding var activeTab: Int
+
+    private(set) var activeIndicatorHeight: CGFloat = 15
+    private(set) var activeIndicatorWidth: CGFloat = 40
     
     var tabs: [TabViewElement] = [
-        .init(id: UUID(),
-              title: "Home",
-              systemImage: "house",
-              activeSystemImage: "house.fill"),
         .init(id: UUID(),
               title: "Profile",
               systemImage: "person",
               activeSystemImage: "person.fill"),
         .init(id: UUID(),
+              title: "Home",
+              systemImage: "house",
+              activeSystemImage: "house.fill"),
+        .init(id: UUID(),
               title: "Favorites",
               systemImage: "heart",
-              backgroundColor: Color.white.cgColor,
-              iconColor: Color.black.cgColor,
-              textColor: Color.black.cgColor,
               activeSystemImage: "heart.fill",
-              activeBackgroundColor: Color.white.cgColor,
-              activeIconColor: Color.red.cgColor,
-              activeTextColor: Color.red.cgColor)
+              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              activeBackgroundColor: CGColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1),
+              activeIconColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              activeTextColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))
     ]
     
     var body: some View {
@@ -59,8 +57,7 @@ struct BootcampTabViewOne: View {
                             }
                     }
                 }
-                .frame(height: height)
-                .frame(maxWidth: .infinity)
+                .frame(height: proxy.size.height - activeIndicatorHeight / 2)
                 .cornerRadius(cornerRadius)
                 .shadow(color: .black.opacity(0.05), radius: 2, y: 5)
             }
@@ -69,20 +66,20 @@ struct BootcampTabViewOne: View {
     
     private func getTabBackgroundColor(for tab: TabViewElement, active: Bool = false) -> Color {
         if active {
-            return (tab.activeBackgroundColor != nil) ? Color(tab.activeBackgroundColor!) : activeTabBackgroundColor
+            return (tab.activeBackgroundColor != nil) ? Color(cgColor: tab.activeBackgroundColor!) : defaultActiveTabBackgroundColor
         } else {
-            return (tab.backgroundColor != nil) ? Color(tab.backgroundColor!) : tabBackgroundColor
+            return (tab.backgroundColor != nil) ? Color(cgColor: tab.backgroundColor!) : defaultTabBackgroundColor
         }
     }
     
     private func activeIndicator(in size: CGSize) -> some View {
         Rectangle()
-            .frame(height: activeIndicatorHeight)
+            .frame(height: activeIndicatorHeight / 2)
             .frame(maxWidth: .infinity)
             .foregroundColor(.clear)
             .overlay {
                 Rectangle()
-                    .foregroundColor(activeColor)
+                    .foregroundColor(getTabBackgroundColor(for: tabs[activeTab], active: true))
                     .cornerRadius(cornerRadius)
                     .frame(width: activeIndicatorWidth)
                     .position(activeIndicatorPoint(in: size))
@@ -93,7 +90,7 @@ struct BootcampTabViewOne: View {
         let tabWidth = size.width / CGFloat(tabs.count)
         let midTabSelectedTab = tabWidth * CGFloat(activeTab) + tabWidth / 2
         let xPos: CGFloat = midTabSelectedTab
-        let yPos: CGFloat = activeIndicatorHeight+activeIndicatorHeight / 3
+        let yPos: CGFloat = activeIndicatorHeight - activeIndicatorHeight / 2
         return .init(x: xPos, y: yPos)
     }
 }
@@ -107,11 +104,12 @@ fileprivate struct TabViewElementView: View {
         VStack(spacing: 5) {
             HStack {
                 Image(systemName: isActive ? tabViewElement.activeSystemImage : tabViewElement.systemImage)
-                    .aspectRatio(contentMode: .fit)
+                    .font(.footnote)
                     .foregroundColor(getIconColor())
+                    .scaleEffect(isActive ? 1.5 : 1)
             }
             Text(tabViewElement.title)
-                .font(.subheadline)
+                .font(.footnote)
                 .foregroundColor(getTextColor())
         }
     }
@@ -138,12 +136,12 @@ struct TabViewElement: Identifiable {
     let id: UUID
     let title: String
     let systemImage: String
+    let activeSystemImage: String
     
     var backgroundColor: CGColor? = nil
     var iconColor: CGColor? = nil
     var textColor: CGColor? = nil
     
-    let activeSystemImage: String
     var activeBackgroundColor: CGColor? = nil
     var activeIconColor: CGColor? = nil
     var activeTextColor: CGColor? = nil
@@ -157,15 +155,12 @@ struct BootcampTabViewOneWrapper: View {
         ZStack {
             Rectangle()
                 .ignoresSafeArea(.all)
-                .foregroundColor(Color.cyan.opacity(0.08))
+                .foregroundColor(Color.cyan.opacity(0.7))
             
-            BootcampTabViewOne(activeTab: $activeTab)
-                .padding()
-            
-            Button("Change Active") {
-                withAnimation {
-                    activeTab = Int.random(in: 0...3)
-                }
+            VStack {
+                BootcampTabViewOne(activeTab: $activeTab)
+                    .frame(height: 60)
+                    .padding()
             }
         }
     }

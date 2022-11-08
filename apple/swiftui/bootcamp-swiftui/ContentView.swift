@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var bootcampTabViewOneActiveTab = 2
     var body: some View {
         NavigationView {
             List {
@@ -19,6 +21,21 @@ struct ContentView: View {
                 Section("Exercises") {
                     NavigationLink("0001 - Property Wrappers", destination: {
                         SwiftPropertyWrappers()
+                    })
+                }
+                Section("Components") {
+                    NavigationLink("0001 - BootcampTabViewOne", destination: {
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.cyan)
+                                .ignoresSafeArea()
+                            VStack {
+                                Spacer()
+                                BootcampTabViewOne(activeTab: $bootcampTabViewOneActiveTab)
+                                    .frame(height: 70)
+                                    .padding()
+                            }
+                        }
                     })
                 }
             }
