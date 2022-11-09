@@ -20,3 +20,10 @@ Flows are pieces of an app - they help me learn only a specific part of a projec
 | ----------- | --------------------------------------------------------------------------------- |
 | Portrait    | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOne.gif)          |
 | Landscape   | ![Alt Text](/resources/static/swiftui-components/BootcampTabViewOneLandscape.gif) |
+
+### **[BootcampColorSwitcherView](apple/swiftui/bootcamp-swiftui/Components/0002-BootcampTabColorSwitcherView)**
+
+|                                                                  | Pic                                                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Multi Row Color Switcher                                         | ![Alt Text](/resources/static/swiftui-components/BootcampColorSwitcherView.gif)          |
+| Changing the colors of BootcampTabViewOne via the Color Switcher | ![Alt Text](/resources/static/swiftui-components/BootcampColorSwitcherViewUsability.gif) |
