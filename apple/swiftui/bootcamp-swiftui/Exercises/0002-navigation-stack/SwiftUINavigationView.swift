@@ -10,7 +10,7 @@ import SwiftUI
 struct SwiftUINavigationView: View {
     var body: some View {
         List {
-            NavigationLink("Navigation Stack", destination: { SwiftUIObservedObject() })
+            NavigationLink("Navigation Stack", destination: { SwiftUINavigationStackView() })
         }
     }
 }

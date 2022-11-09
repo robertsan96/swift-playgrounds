@@ -1,4 +1,4 @@
-# Bootcamp Swift
+# Swift Playgrounds
 
 The place I do Swift, SwiftUI, experiments, dumb code and apps to learn features, practice & improve.
 
@@ -27,3 +27,11 @@ Flows are pieces of an app - they help me learn only a specific part of a projec
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Multi Row Color Switcher                                         | ![Alt Text](/resources/static/swiftui-components/BootcampColorSwitcherView.gif)          |
 | Changing the colors of BootcampTabViewOne via the Color Switcher | ![Alt Text](/resources/static/swiftui-components/BootcampColorSwitcherViewUsability.gif) |
+
+## Resources
+
+List of great articles, authors and docs.
+
+| Title                                                                                                                                                     | About                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| [Mastering NavigationStack in SwiftUI. Navigator Pattern.](https://swiftwithmajid.com/2022/06/15/mastering-navigationstack-in-swiftui-navigator-pattern/) | NavigationStack SwiftUI component |

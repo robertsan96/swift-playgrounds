@@ -24,6 +24,8 @@
 		53CF5338291B98A4002ED4C5 /* BootcampColorSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5337291B98A4002ED4C5 /* BootcampColorSwitcherView.swift */; };
 		53CF533A291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5339291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift */; };
 		53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */; };
+		53CF5341291BAF4A002ED4C5 /* SwiftUINavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5340291BAF4A002ED4C5 /* SwiftUINavigationStackView.swift */; };
+		53CF5344291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5343291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,6 @@
 		53CF530929191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootcamp_swiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		53CF531929191A39002ED4C5 /* EcommerceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceFlow.swift; sourceTree = "<group>"; };
 		53CF531D291923AD002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		53CF531F291A5F43002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF5321291A602E002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF5323291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrappers.swift; sourceTree = "<group>"; };
 		53CF5328291A799F002ED4C5 /* SwiftUIObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIObservedObject.swift; sourceTree = "<group>"; };
@@ -68,6 +69,8 @@
 		53CF5337291B98A4002ED4C5 /* BootcampColorSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampColorSwitcherView.swift; sourceTree = "<group>"; };
 		53CF5339291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTabViewOnePreviewHelper.swift; sourceTree = "<group>"; };
 		53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationView.swift; sourceTree = "<group>"; };
+		53CF5340291BAF4A002ED4C5 /* SwiftUINavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationStackView.swift; sourceTree = "<group>"; };
+		53CF5343291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigatorPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +170,6 @@
 		53CF531E291A5F34002ED4C5 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				53CF531F291A5F43002ED4C5 /* README.md */,
 				53CF5316291919E0002ED4C5 /* 0001-ecommerce-flow */,
 			);
 			path = Flows;
@@ -256,9 +258,27 @@
 		53CF533B291BAD7B002ED4C5 /* 0002-navigation-stack */ = {
 			isa = PBXGroup;
 			children = (
+				53CF5342291BB2CB002ED4C5 /* 0002-2-NavigatorPattern */,
+				53CF533F291BAF35002ED4C5 /* 0002-1-NavigationStack */,
 				53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */,
 			);
 			path = "0002-navigation-stack";
+			sourceTree = "<group>";
+		};
+		53CF533F291BAF35002ED4C5 /* 0002-1-NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5340291BAF4A002ED4C5 /* SwiftUINavigationStackView.swift */,
+			);
+			path = "0002-1-NavigationStack";
+			sourceTree = "<group>";
+		};
+		53CF5342291BB2CB002ED4C5 /* 0002-2-NavigatorPattern */ = {
+			isa = PBXGroup;
+			children = (
+				53CF5343291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift */,
+			);
+			path = "0002-2-NavigatorPattern";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +414,10 @@
 				53CF5338291B98A4002ED4C5 /* BootcampColorSwitcherView.swift in Sources */,
 				53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */,
 				53CF5324291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift in Sources */,
+				53CF5341291BAF4A002ED4C5 /* SwiftUINavigationStackView.swift in Sources */,
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
 				53CF532F291A8409002ED4C5 /* SwiftUIMVVM.swift in Sources */,
+				53CF5344291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
 				53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */,
 				53CF5329291A799F002ED4C5 /* SwiftUIObservedObject.swift in Sources */,
