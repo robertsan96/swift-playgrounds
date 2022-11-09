@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var bootcampTabViewOneActiveTab = 2
+    @State private var bootcampTabViewOneActiveTab = 0
+    @State private var bootcampTabViewOneTabs: [TabViewElement] = []
+    
     var body: some View {
         NavigationView {
             List {
@@ -30,8 +32,11 @@ struct ContentView: View {
                                 .foregroundColor(.cyan.opacity(0.15))
                                 .ignoresSafeArea()
                             VStack {
+                                BootcampTabViewOnePreviewHelper(tabs: $bootcampTabViewOneTabs,
+                                                                activeTab: $bootcampTabViewOneActiveTab)
                                 Spacer()
-                                BootcampTabViewOne(activeTab: $bootcampTabViewOneActiveTab)
+                                BootcampTabViewOne(tabs: bootcampTabViewOneTabs,
+                                                   activeTab: $bootcampTabViewOneActiveTab)
                                     .frame(height: 70)
                                     .padding()
                             }

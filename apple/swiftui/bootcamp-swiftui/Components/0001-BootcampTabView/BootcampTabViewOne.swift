@@ -9,63 +9,48 @@ import SwiftUI
 
 struct BootcampTabViewOne: View {
     
-    var cornerRadius: CGFloat = 10
+    private(set) var cornerRadius: CGFloat = 10
     
-    var defaultTabBackgroundColor: Color = .white
-    var defaultActiveTabBackgroundColor: Color = .white
+    private(set) var defaultTabBackgroundColor: Color = .white
+    private(set) var defaultActiveTabBackgroundColor: Color = .white
     
-    @Binding var activeTab: Int
-
     private(set) var activeIndicatorHeight: CGFloat = 15
     private(set) var activeIndicatorWidth: CGFloat = 40
     
-    var tabs: [TabViewElement] = [
-        .init(id: UUID(),
-              title: "Profile",
-              systemImage: "person",
-              activeSystemImage: "person.fill"),
-        .init(id: UUID(),
-              title: "Home",
-              systemImage: "house",
-              activeSystemImage: "house.fill",
-              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
-              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
-              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
-              activeIconColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1),
-              activeTextColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1)),
-        .init(id: UUID(),
-              title: "Favorites",
-              systemImage: "heart",
-              activeSystemImage: "heart.fill",
-              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
-              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
-              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
-              activeBackgroundColor: CGColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1),
-              activeIconColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
-              activeTextColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))
-    ]
+    var tabs: [TabViewElement] = []
+    @Binding var activeTab: Int
     
     var body: some View {
         GeometryReader { proxy in
-            VStack(spacing: 0) {
-                activeIndicator(in: proxy.size)
-                HStack(spacing: 0) {
-                    ForEach(0..<tabs.count, id:\.self) { index in
-                        TabViewElementView(isActive: activeTab == index,
-                                           tabViewElement: tabs[index])
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(getTabBackgroundColor(for: tabs[index], active: activeTab == index))
-                            .onTapGesture {
-                                withAnimation(.easeOut(duration: 0.2)) {
-                                    activeTab = index
-                                }
-                            }
+            if tabs.count == 0 {
+                noTabsView()
+            } else {
+                tabsContainer(in: proxy.size)
+            }
+        }
+    }
+    
+    private func noTabsView() -> some View { EmptyView() }
+    
+    private func tabsContainer(in size: CGSize) -> some View {
+        VStack(spacing: 0) {
+            activeIndicator(in: size)
+            HStack(spacing: 0) {
+                ForEach(0..<tabs.count, id:\.self) { index in
+                    TabViewElementView(isActive: activeTab == index,
+                                       tabViewElement: tabs[index])
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(getTabBackgroundColor(for: tabs[index], active: activeTab == index))
+                    .onTapGesture {
+                        withAnimation(.easeOut(duration: 0.2)) {
+                            activeTab = index
+                        }
                     }
                 }
-                .frame(height: proxy.size.height - activeIndicatorHeight / 2)
-                .cornerRadius(cornerRadius)
-                .shadow(color: .black.opacity(0.05), radius: 2, y: 5)
             }
+            .frame(height: size.height - activeIndicatorHeight / 2)
+            .cornerRadius(cornerRadius)
+            .shadow(color: .black.opacity(0.05), radius: 2, y: 5)
         }
     }
     
@@ -139,7 +124,7 @@ fileprivate struct TabViewElementView: View {
 struct TabViewElement: Identifiable {
     
     let id: UUID
-    let title: String
+    var title: String
     let systemImage: String
     let activeSystemImage: String
     
@@ -152,9 +137,34 @@ struct TabViewElement: Identifiable {
     var activeTextColor: CGColor? = nil
 }
 
-struct BootcampTabViewOneWrapper: View {
+fileprivate struct BootcampTabViewOneWrapper: View {
     
-    @State var activeTab = 2
+    @State private var activeTab = 2
+    @State private var tabs: [TabViewElement] = [
+        .init(id: UUID(),
+              title: "Profile",
+              systemImage: "person",
+              activeSystemImage: "person.fill"),
+        .init(id: UUID(),
+              title: "Home",
+              systemImage: "house",
+              activeSystemImage: "house.fill",
+              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              activeIconColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1),
+              activeTextColor: CGColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1)),
+        .init(id: UUID(),
+              title: "Favorites",
+              systemImage: "heart",
+              activeSystemImage: "heart.fill",
+              backgroundColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              iconColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              textColor: CGColor(red: 0, green: 0, blue: 0, alpha: 1),
+              activeBackgroundColor: CGColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1),
+              activeIconColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1),
+              activeTextColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))
+    ]
     
     var body: some View {
         ZStack {
@@ -163,7 +173,12 @@ struct BootcampTabViewOneWrapper: View {
                 .foregroundColor(Color.cyan.opacity(0.15))
             
             VStack {
-                BootcampTabViewOne(activeTab: $activeTab)
+                Spacer()
+                BootcampTabViewOnePreviewHelper(tabs: $tabs, activeTab: $activeTab)
+                    .padding()
+                Spacer()
+                Spacer()
+                BootcampTabViewOne(tabs: tabs, activeTab: $activeTab)
                     .frame(height: 60)
                     .padding()
             }
