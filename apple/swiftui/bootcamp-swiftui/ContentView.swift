@@ -27,6 +27,9 @@ struct ContentView: View {
                     NavigationLink("0002 - Navigation Stack", destination: {
                         SwiftUINavigationView()
                     })
+                    NavigationLink("0003 - Classes, Structs & Actors", destination: {
+                        SwiftUIClassStructActor()
+                    })
                 }
                 Section("Components") {
                     NavigationLink("0001 - BootcampTabViewOne", destination: {

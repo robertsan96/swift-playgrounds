@@ -35,3 +35,4 @@ List of great articles, authors and docs.
 | Title                                                                                                                                                     | About                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | [Mastering NavigationStack in SwiftUI. Navigator Pattern.](https://swiftwithmajid.com/2022/06/15/mastering-navigationstack-in-swiftui-navigator-pattern/) | NavigationStack SwiftUI component |
+| [Actors in Swift: how to use and prevent data races](https://www.avanderlee.com/swift/actors/)                                                            | Great article about Swift Actors  |

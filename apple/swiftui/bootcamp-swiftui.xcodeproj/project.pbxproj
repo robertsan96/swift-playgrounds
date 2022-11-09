@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5308696E291BF6B8000077FF /* SwiftUIClassStructActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308696D291BF6B8000077FF /* SwiftUIClassStructActor.swift */; };
+		53086971291BF6CB000077FF /* SwiftUIActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53086970291BF6CB000077FF /* SwiftUIActors.swift */; };
+		53585E08291BF04500C1781A /* EcommerceProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53585E07291BF04500C1781A /* EcommerceProductCardView.swift */; };
 		53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF52EB29191994002ED4C5 /* bootcamp_swiftuiApp.swift */; };
 		53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF52ED29191994002ED4C5 /* ContentView.swift */; };
 		53CF52F029191994002ED4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CF52EF29191994002ED4C5 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5308696D291BF6B8000077FF /* SwiftUIClassStructActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIClassStructActor.swift; sourceTree = "<group>"; };
+		53086970291BF6CB000077FF /* SwiftUIActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActors.swift; sourceTree = "<group>"; };
+		53585E07291BF04500C1781A /* EcommerceProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceProductCardView.swift; sourceTree = "<group>"; };
 		53CF52E829191994002ED4C5 /* bootcamp-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bootcamp-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CF52EB29191994002ED4C5 /* bootcamp_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootcamp_swiftuiApp.swift; sourceTree = "<group>"; };
 		53CF52ED29191994002ED4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5308696C291BF69A000077FF /* 0003-class-struct-actor */ = {
+			isa = PBXGroup;
+			children = (
+				5308696F291BF6BF000077FF /* 0003-1-actors */,
+				5308696D291BF6B8000077FF /* SwiftUIClassStructActor.swift */,
+			);
+			path = "0003-class-struct-actor";
+			sourceTree = "<group>";
+		};
+		5308696F291BF6BF000077FF /* 0003-1-actors */ = {
+			isa = PBXGroup;
+			children = (
+				53086970291BF6CB000077FF /* SwiftUIActors.swift */,
+			);
+			path = "0003-1-actors";
+			sourceTree = "<group>";
+		};
+		53585E06291BF03100C1781A /* 0003-EcommerceProductCardView */ = {
+			isa = PBXGroup;
+			children = (
+				53585E07291BF04500C1781A /* EcommerceProductCardView.swift */,
+			);
+			path = "0003-EcommerceProductCardView";
+			sourceTree = "<group>";
+		};
 		53CF52DF29191994002ED4C5 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +209,7 @@
 		53CF5320291A6025002ED4C5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				53585E06291BF03100C1781A /* 0003-EcommerceProductCardView */,
 				53CF5336291B9896002ED4C5 /* 0002-BootcampColorSwitcherView */,
 				53CF5333291A95C9002ED4C5 /* 0001-BootcampTabView */,
 				53CF5321291A602E002ED4C5 /* README.md */,
@@ -188,6 +220,7 @@
 		53CF5322291A792D002ED4C5 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				5308696C291BF69A000077FF /* 0003-class-struct-actor */,
 				53CF533B291BAD7B002ED4C5 /* 0002-navigation-stack */,
 				53CF5325291A795E002ED4C5 /* 0001-property-wrapper */,
 			);
@@ -411,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53086971291BF6CB000077FF /* SwiftUIActors.swift in Sources */,
 				53CF5338291B98A4002ED4C5 /* BootcampColorSwitcherView.swift in Sources */,
 				53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */,
 				53CF5324291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift in Sources */,
@@ -418,9 +452,11 @@
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
 				53CF532F291A8409002ED4C5 /* SwiftUIMVVM.swift in Sources */,
 				53CF5344291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift in Sources */,
+				5308696E291BF6B8000077FF /* SwiftUIClassStructActor.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
 				53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */,
 				53CF5329291A799F002ED4C5 /* SwiftUIObservedObject.swift in Sources */,
+				53585E08291BF04500C1781A /* EcommerceProductCardView.swift in Sources */,
 				53CF532B291A81C9002ED4C5 /* SwiftUIStateObject.swift in Sources */,
 				53CF5335291A95E3002ED4C5 /* BootcampTabViewOne.swift in Sources */,
 				53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */,
