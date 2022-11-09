@@ -1,5 +1,5 @@
 //
-//  SwiftObservedObject.swift
+//  SwiftStateObject.swift
 //  bootcamp-swiftui
 //
 //  Created by Robert Sandru on 08.11.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftObservedObject: View {
+struct SwiftUIStateObject: View {
     
     // 1. Refresh Signal - the view is going to redraw on state change
     @State var refreshRef = Int.random(in: 1...100)
@@ -30,19 +30,29 @@ struct SwiftObservedObject: View {
 
 fileprivate struct ImpalerCardView: View {
     
-    // 5. It is going to create a new instance whenever parent redraws
-    @ObservedObject var impalerViewModel = ImpalerViewModel()
+    // 5. Proving that the view is going to be asked to redraw
+    // As this is not a @State variable, it is going to be recreated
+    // whenever the view is redrawn
+    var impalerRefreshRef = Int.random(in: 1000...10000)
+    
+    // 6. It is going to maintain the instance whenever parent redraws
+    @StateObject var impalerViewModel = ImpalerViewModel()
     
     var body: some View {
         VStack {
-            // 6. On redraw, the impaler number changes as it is randomly generated in the view model
+            Text("Impaler Refresh Ref: \(impalerRefreshRef)")
+            // 7. On redraw, the impaler number is not going to change, because the
+            // the random number is not changing due to the lack of deinitialization
             Text("Impaler: \(impalerViewModel.impaler)")
             
-            // 7. Number of impaled is going to be 0 whenever a redraw is required
+            // 8. Number of impaled is going to be persisted even if a redraw is required (keeping the instance in memory as state)
             Text("Impaled: \(impalerViewModel.impaled)")
             
-            // 8. Increasing the number will be maintained until parent asks for redraw
+            // 9. Increasing the number will be maintained
             Button("Impale 'em!", action: { impalerViewModel.increment(impaledBy: .random(in: 1...5)) })
+        }
+        .onAppear {
+            print("Redraw Signal!")
         }
     }
 }
@@ -52,7 +62,7 @@ fileprivate class ImpalerViewModel: ObservableObject {
     @Published var impaler = "Vlad Tepes the \(Int.random(in: 4...100))th"
     @Published var impaled = 0
     
-    // 9. Deinit is getting called on every redraw
+    // 9. Deinit is not getting called on every redraw
     deinit {
         print("Deinit called.")
     }
@@ -61,9 +71,8 @@ fileprivate class ImpalerViewModel: ObservableObject {
         impaled += number
     }
 }
-
-struct SwiftObservedObject_Previews: PreviewProvider {
+struct SwiftUIStateObject_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftObservedObject()
+        SwiftUIStateObject()
     }
 }

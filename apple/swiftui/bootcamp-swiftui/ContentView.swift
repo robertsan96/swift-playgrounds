@@ -22,7 +22,10 @@ struct ContentView: View {
                 }
                 Section("Exercises") {
                     NavigationLink("0001 - Property Wrappers", destination: {
-                        SwiftPropertyWrappers()
+                        SwiftUIPropertyWrappers()
+                    })
+                    NavigationLink("0002 - Navigation Stack", destination: {
+                        SwiftUINavigationView()
                     })
                 }
                 Section("Components") {

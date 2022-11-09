@@ -15,14 +15,15 @@
 		53CF530829191995002ED4C5 /* bootcamp_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF530729191995002ED4C5 /* bootcamp_swiftuiUITests.swift */; };
 		53CF530A29191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF530929191995002ED4C5 /* bootcamp_swiftuiUITestsLaunchTests.swift */; };
 		53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF531929191A39002ED4C5 /* EcommerceFlow.swift */; };
-		53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */; };
-		53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */; };
-		53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */; };
-		53CF532F291A8409002ED4C5 /* SwiftMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */; };
+		53CF5324291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5323291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift */; };
+		53CF5329291A799F002ED4C5 /* SwiftUIObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5328291A799F002ED4C5 /* SwiftUIObservedObject.swift */; };
+		53CF532B291A81C9002ED4C5 /* SwiftUIStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532A291A81C9002ED4C5 /* SwiftUIStateObject.swift */; };
+		53CF532F291A8409002ED4C5 /* SwiftUIMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF532E291A8409002ED4C5 /* SwiftUIMVVM.swift */; };
 		53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5331291A848E002ED4C5 /* PassingViewModelToChildren.swift */; };
 		53CF5335291A95E3002ED4C5 /* BootcampTabViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5334291A95E3002ED4C5 /* BootcampTabViewOne.swift */; };
 		53CF5338291B98A4002ED4C5 /* BootcampColorSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5337291B98A4002ED4C5 /* BootcampColorSwitcherView.swift */; };
 		53CF533A291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF5339291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift */; };
+		53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +59,15 @@
 		53CF531D291923AD002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF531F291A5F43002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53CF5321291A602E002ED4C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPropertyWrappers.swift; sourceTree = "<group>"; };
-		53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObservedObject.swift; sourceTree = "<group>"; };
-		53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStateObject.swift; sourceTree = "<group>"; };
-		53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMVVM.swift; sourceTree = "<group>"; };
+		53CF5323291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrappers.swift; sourceTree = "<group>"; };
+		53CF5328291A799F002ED4C5 /* SwiftUIObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIObservedObject.swift; sourceTree = "<group>"; };
+		53CF532A291A81C9002ED4C5 /* SwiftUIStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStateObject.swift; sourceTree = "<group>"; };
+		53CF532E291A8409002ED4C5 /* SwiftUIMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVM.swift; sourceTree = "<group>"; };
 		53CF5331291A848E002ED4C5 /* PassingViewModelToChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingViewModelToChildren.swift; sourceTree = "<group>"; };
 		53CF5334291A95E3002ED4C5 /* BootcampTabViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTabViewOne.swift; sourceTree = "<group>"; };
 		53CF5337291B98A4002ED4C5 /* BootcampColorSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampColorSwitcherView.swift; sourceTree = "<group>"; };
 		53CF5339291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTabViewOnePreviewHelper.swift; sourceTree = "<group>"; };
+		53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		53CF5322291A792D002ED4C5 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				53CF533B291BAD7B002ED4C5 /* 0002-navigation-stack */,
 				53CF5325291A795E002ED4C5 /* 0001-property-wrapper */,
 			);
 			path = Exercises;
@@ -192,37 +195,37 @@
 		53CF5325291A795E002ED4C5 /* 0001-property-wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				53CF532D291A83E5002ED4C5 /* 0001-1-SwiftObservedObject */,
-				53CF5326291A7983002ED4C5 /* 0001-2-SwiftStateObject */,
-				53CF532C291A83C4002ED4C5 /* 0001-3-SwiftMVVM */,
-				53CF5323291A794A002ED4C5 /* SwiftPropertyWrappers.swift */,
+				53CF532D291A83E5002ED4C5 /* 0001-1-SwiftUIObservedObject */,
+				53CF5326291A7983002ED4C5 /* 0001-2-SwiftUIStateObject */,
+				53CF532C291A83C4002ED4C5 /* 0001-3-SwiftUIMVVM */,
+				53CF5323291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift */,
 			);
 			path = "0001-property-wrapper";
 			sourceTree = "<group>";
 		};
-		53CF5326291A7983002ED4C5 /* 0001-2-SwiftStateObject */ = {
+		53CF5326291A7983002ED4C5 /* 0001-2-SwiftUIStateObject */ = {
 			isa = PBXGroup;
 			children = (
-				53CF532A291A81C9002ED4C5 /* SwiftStateObject.swift */,
+				53CF532A291A81C9002ED4C5 /* SwiftUIStateObject.swift */,
 			);
-			path = "0001-2-SwiftStateObject";
+			path = "0001-2-SwiftUIStateObject";
 			sourceTree = "<group>";
 		};
-		53CF532C291A83C4002ED4C5 /* 0001-3-SwiftMVVM */ = {
+		53CF532C291A83C4002ED4C5 /* 0001-3-SwiftUIMVVM */ = {
 			isa = PBXGroup;
 			children = (
 				53CF5330291A8478002ED4C5 /* 0001-3-1-PassingViewModelToChildren */,
-				53CF532E291A8409002ED4C5 /* SwiftMVVM.swift */,
+				53CF532E291A8409002ED4C5 /* SwiftUIMVVM.swift */,
 			);
-			path = "0001-3-SwiftMVVM";
+			path = "0001-3-SwiftUIMVVM";
 			sourceTree = "<group>";
 		};
-		53CF532D291A83E5002ED4C5 /* 0001-1-SwiftObservedObject */ = {
+		53CF532D291A83E5002ED4C5 /* 0001-1-SwiftUIObservedObject */ = {
 			isa = PBXGroup;
 			children = (
-				53CF5328291A799F002ED4C5 /* SwiftObservedObject.swift */,
+				53CF5328291A799F002ED4C5 /* SwiftUIObservedObject.swift */,
 			);
-			path = "0001-1-SwiftObservedObject";
+			path = "0001-1-SwiftUIObservedObject";
 			sourceTree = "<group>";
 		};
 		53CF5330291A8478002ED4C5 /* 0001-3-1-PassingViewModelToChildren */ = {
@@ -248,6 +251,14 @@
 				53CF5337291B98A4002ED4C5 /* BootcampColorSwitcherView.swift */,
 			);
 			path = "0002-BootcampColorSwitcherView";
+			sourceTree = "<group>";
+		};
+		53CF533B291BAD7B002ED4C5 /* 0002-navigation-stack */ = {
+			isa = PBXGroup;
+			children = (
+				53CF533D291BADB7002ED4C5 /* SwiftUINavigationView.swift */,
+			);
+			path = "0002-navigation-stack";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,12 +393,13 @@
 			files = (
 				53CF5338291B98A4002ED4C5 /* BootcampColorSwitcherView.swift in Sources */,
 				53CF5332291A848E002ED4C5 /* PassingViewModelToChildren.swift in Sources */,
-				53CF5324291A794A002ED4C5 /* SwiftPropertyWrappers.swift in Sources */,
+				53CF5324291A794A002ED4C5 /* SwiftUIPropertyWrappers.swift in Sources */,
 				53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */,
-				53CF532F291A8409002ED4C5 /* SwiftMVVM.swift in Sources */,
+				53CF532F291A8409002ED4C5 /* SwiftUIMVVM.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
-				53CF5329291A799F002ED4C5 /* SwiftObservedObject.swift in Sources */,
-				53CF532B291A81C9002ED4C5 /* SwiftStateObject.swift in Sources */,
+				53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */,
+				53CF5329291A799F002ED4C5 /* SwiftUIObservedObject.swift in Sources */,
+				53CF532B291A81C9002ED4C5 /* SwiftUIStateObject.swift in Sources */,
 				53CF5335291A95E3002ED4C5 /* BootcampTabViewOne.swift in Sources */,
 				53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */,
 				53CF533A291BA767002ED4C5 /* BootcampTabViewOnePreviewHelper.swift in Sources */,

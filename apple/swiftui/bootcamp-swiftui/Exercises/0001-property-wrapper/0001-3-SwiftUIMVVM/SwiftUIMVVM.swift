@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftMVVM: View {
+struct SwiftUIMVVM: View {
     var body: some View {
         List {
             NavigationLink("Passing the view model to children", destination: { PassingViewModelToChildren() })
@@ -17,10 +17,10 @@ struct SwiftMVVM: View {
 
 fileprivate
 
-struct SwiftMVVM_Previews: PreviewProvider {
+struct SwiftUIMVVM_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SwiftMVVM()
+            SwiftUIMVVM()
         }
     }
 }
