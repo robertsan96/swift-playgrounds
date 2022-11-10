@@ -41,20 +41,63 @@ fileprivate class SwiftUIActorsRaceConditionViewModel: ObservableObject {
         serverUrl = remoteService.serverUrl // safe to do so
     }
     
+    deinit {
+        print("Deinit...")
+        firstRemoteServiceTask?.cancel()
+        secondRemoteServiceTask?.cancel()
+    }
+    
     // This method is producing a race condition
     // However, it is not resulting in an exception
     // due to the safe nature of actors. Anyway,
     // on button press, notice the task priorities,
     // the printed value and the Text value on screen.
+    //
+    // If the sleepTime of this task is smaller than the seconds,
+    // we are NOT going to encounter the race condition:
+    // advancedApiCall will increase the apiHits counter
+    // the secondRemoteServiceTask is trying to set it in the
+    // publisher. Normal flow.
+    // Otherwise, if it takes longer to call the advancedApiCall,
+    // the shown number of hits on the screen will be smaller
+    // than the real number set in remoteService.apiHits !
     func startTasks() {
         // will try to increase the number of api hits
-        firstRemoteServiceTask = Task(priority: .low) {
-            await self.remoteService.advancedApiCall()
+        let firstSleepTime = TimeInterval.random(in: 2...5)
+        let secondSleepTime = TimeInterval.random(in: 2...5)
+        
+        firstRemoteServiceTask?.cancel()
+        secondRemoteServiceTask?.cancel()
+        
+        firstRemoteServiceTask = Task { [weak self] in
+            print("FirstRemoteService sleeping for: \(firstSleepTime)")
+            
+            // in order to avoid delayed deinitialization, the task is cancelled manually
+            // so we can't force the try, because the task could throw a CancellationError
+            // on cancellation, we don't want to call the api in the actor.
+            // smash that Start Tasks button to see.
+            do {
+                try await Task.sleep(for: .seconds(firstSleepTime))
+                await self?.remoteService.advancedApiCall()
+            } catch {
+                print("FirstRemoteService cancelled - not increasing hits.")
+            }
+            return
         }
         
         // will try to show the correct number of api hits
-        secondRemoteServiceTask = Task(priority: .userInitiated) {
-            self.apiHits = await self.remoteService.apiHits
+        secondRemoteServiceTask = Task { [weak self] in
+            print("SecondRemoteService sleeping for: \(secondSleepTime)")
+            do {
+                try await Task.sleep(for: .seconds(secondSleepTime))
+                if let apiHits = await self?.remoteService.apiHits {
+                    self?.apiHits = apiHits
+                    print("SecondRemoteService set api hits to: \(apiHits)")
+                }
+            } catch {
+                print("SecondRemoteService cancelled - not updating hits")
+            }
+            return
         }
     }
 }
