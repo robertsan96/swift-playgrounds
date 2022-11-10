@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5308696E291BF6B8000077FF /* SwiftUIClassStructActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308696D291BF6B8000077FF /* SwiftUIClassStructActor.swift */; };
 		53086971291BF6CB000077FF /* SwiftUIActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53086970291BF6CB000077FF /* SwiftUIActors.swift */; };
+		53086973291CE5F3000077FF /* SwiftUIActorsRaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53086972291CE5F3000077FF /* SwiftUIActorsRaceCondition.swift */; };
 		53585E08291BF04500C1781A /* EcommerceProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53585E07291BF04500C1781A /* EcommerceProductCardView.swift */; };
 		53CF52EC29191994002ED4C5 /* bootcamp_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF52EB29191994002ED4C5 /* bootcamp_swiftuiApp.swift */; };
 		53CF52EE29191994002ED4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF52ED29191994002ED4C5 /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		5308696D291BF6B8000077FF /* SwiftUIClassStructActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIClassStructActor.swift; sourceTree = "<group>"; };
 		53086970291BF6CB000077FF /* SwiftUIActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActors.swift; sourceTree = "<group>"; };
+		53086972291CE5F3000077FF /* SwiftUIActorsRaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActorsRaceCondition.swift; sourceTree = "<group>"; };
 		53585E07291BF04500C1781A /* EcommerceProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceProductCardView.swift; sourceTree = "<group>"; };
 		53CF52E829191994002ED4C5 /* bootcamp-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bootcamp-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CF52EB29191994002ED4C5 /* bootcamp_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootcamp_swiftuiApp.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				53086970291BF6CB000077FF /* SwiftUIActors.swift */,
+				53086972291CE5F3000077FF /* SwiftUIActorsRaceCondition.swift */,
 			);
 			path = "0003-1-actors";
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				53CF5344291BB2DA002ED4C5 /* SwiftUINavigatorPattern.swift in Sources */,
 				5308696E291BF6B8000077FF /* SwiftUIClassStructActor.swift in Sources */,
 				53CF531A29191A39002ED4C5 /* EcommerceFlow.swift in Sources */,
+				53086973291CE5F3000077FF /* SwiftUIActorsRaceCondition.swift in Sources */,
 				53CF533E291BADB7002ED4C5 /* SwiftUINavigationView.swift in Sources */,
 				53CF5329291A799F002ED4C5 /* SwiftUIObservedObject.swift in Sources */,
 				53585E08291BF04500C1781A /* EcommerceProductCardView.swift in Sources */,

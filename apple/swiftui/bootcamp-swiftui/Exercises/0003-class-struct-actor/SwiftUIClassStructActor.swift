@@ -11,6 +11,7 @@ struct SwiftUIClassStructActor: View {
     var body: some View {
         List {
             NavigationLink("Actors", destination: { SwiftUIActors() })
+            NavigationLink("Actors + Race Conditions", destination: { SwiftUIActorsRaceCondition() })
         }
     }
 }

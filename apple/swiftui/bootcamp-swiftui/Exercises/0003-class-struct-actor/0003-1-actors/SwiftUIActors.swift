@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SwiftUIActors: View {
     
-    var feeder = ChickenFeeder()
+    fileprivate var feeder = ChickenFeeder()
     
     var body: some View {
         VStack {
@@ -31,7 +31,8 @@ struct SwiftUIActors: View {
     }
 }
 
-actor ChickenFeeder {
+// Reference type, but you can't use inheritance with actors.
+fileprivate actor ChickenFeeder {
     
     let food = "worms" // immutable => non-isolated property. Safe to use, does not cause data races.
     var chickensEating = 0 // mutable, isolated property. Could introduce data races, but that's why we're using actor.
@@ -54,7 +55,7 @@ extension ChickenFeeder {
         print("You can't access this method in a sync context, as this function is isolated. Anyway, we can reach the eating chickens in a sync maneer: \(chickensEating)!")
     }
     
-    // We can use nonisolated on computed properties too
+    // We can use the nonisolated keyword on computed properties too
     nonisolated var description: String {
         "Chickens eating: \(food)"
     }
